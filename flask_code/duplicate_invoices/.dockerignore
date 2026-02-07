@@ -1,0 +1,71 @@
+# =============================================================================
+# Docker Ignore - Duplicate Invoice Detection Module
+# =============================================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+*.egg
+.mypy_cache/
+.pytest_cache/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs (will be mounted as volume)
+logs/
+*.log
+
+# Notebooks
+notebooks/
+*.ipynb
+.ipynb_checkpoints/
+
+# Test files
+tests/
+test_*.py
+*_test.py
+
+# Git
+.git/
+.gitignore
+
+# Docker files in subdirectories
+api/Dockerfile*
+api/docker-compose*.yml
+api/.dockerignore
+api/DOCKER_README.md
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Trained models (large files - mount as volume if needed)
+trained_models/
+*.h5
+*.pkl
+*.joblib
+
+# Data files
+*.csv
+*.xlsx
+
+# OS files
+.DS_Store
+Thumbs.db

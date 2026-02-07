@@ -1,0 +1,72 @@
+# =============================================================================
+# Docker Compose for FastAPI Duplicate Invoice Detection Service
+# =============================================================================
+# Usage:
+#   docker-compose up --build          # Build and start
+#   docker-compose up -d               # Run in background
+#   docker-compose down                # Stop and remove
+#   docker-compose logs -f             # Follow logs
+# =============================================================================
+
+version: '3.8'
+
+services:
+  duplicate-invoice-api:
+    build:
+      context: ..                        # Build context is parent 'duplicate_invoices' directory
+      dockerfile: api/Dockerfile
+    image: duplicate-invoice-api:latest
+    container_name: duplicate-invoice-api
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - WORKERS=1
+      - PYTHONPATH=/app
+      # TensorFlow settings
+      - TF_CPP_MIN_LOG_LEVEL=2           # Reduce TF logging
+      - TF_ENABLE_ONEDNN_OPTS=0          # Disable oneDNN for consistency
+    volumes:
+      # Mount logs directory for persistence
+      - ./logs:/app/duplicate_invoices/api/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Optional: GPU-enabled service (requires nvidia-docker)
+  duplicate-invoice-api-gpu:
+    build:
+      context: ..
+      dockerfile: api/Dockerfile.gpu     # Use GPU Dockerfile if available
+    image: duplicate-invoice-api:gpu
+    container_name: duplicate-invoice-api-gpu
+    ports:
+      - "8001:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - WORKERS=1
+      - PYTHONPATH=/app
+      - TF_CPP_MIN_LOG_LEVEL=2
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ./logs:/app/duplicate_invoices/api/logs
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    profiles:
+      - gpu                               # Only start with: docker-compose --profile gpu up
+
+networks:
+  default:
+    name: duplicate-invoice-network
