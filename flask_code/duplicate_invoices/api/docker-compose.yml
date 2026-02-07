@@ -24,6 +24,7 @@ services:
       - PORT=8000
       - WORKERS=1
       - PYTHONPATH=/app
+      - DUPLICATE_INVOICE_THRESHOLD=60   # Default threshold for duplicate detection
       # TensorFlow settings
       - TF_CPP_MIN_LOG_LEVEL=2           # Reduce TF logging
       - TF_ENABLE_ONEDNN_OPTS=0          # Disable oneDNN for consistency
@@ -52,6 +53,7 @@ services:
       - PORT=8000
       - WORKERS=1
       - PYTHONPATH=/app
+      - DUPLICATE_INVOICE_THRESHOLD=60   # Default threshold for duplicate detection
       - TF_CPP_MIN_LOG_LEVEL=2
       - NVIDIA_VISIBLE_DEVICES=all
     volumes:

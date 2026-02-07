@@ -73,6 +73,7 @@ Environment variables (set in docker-compose.yml or via `-e`):
 | `HOST` | 0.0.0.0 | Server bind address |
 | `PORT` | 8000 | Server port |
 | `WORKERS` | 1 | Number of uvicorn workers |
+| `DUPLICATE_INVOICE_THRESHOLD` | 60 | Similarity threshold (0-100) for duplicate detection |
 | `TF_CPP_MIN_LOG_LEVEL` | 2 | TensorFlow log level |
 
 ## Example API Calls

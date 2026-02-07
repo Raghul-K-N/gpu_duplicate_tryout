@@ -1,15 +1,24 @@
 import pathlib
 import pandas as pd
-import duplicate_invoices
-from code1.src_load import get_duplicate_invoice_threshold_value
+import os
 
 pd.options.display.max_rows = 10
 pd.options.display.max_columns = 10
 
-THRESHOLD_VALUE = get_duplicate_invoice_threshold_value()
+# Try to import threshold from code1 (Flask app context), fallback for standalone/Docker
+try:
+    from code1.src_load import get_duplicate_invoice_threshold_value
+    THRESHOLD_VALUE = get_duplicate_invoice_threshold_value()
+except (ImportError, RuntimeError) as e:
+    # Default threshold when code1 is not available (Docker/standalone deployment)
+    # This matches the default value returned by get_duplicate_invoice_threshold_value()
+    THRESHOLD_VALUE = float(os.environ.get('DUPLICATE_INVOICE_THRESHOLD', 60))
+
 POSTED_DATE_THRESHOLD = 365
 
-PACKAGE_ROOT = pathlib.Path(duplicate_invoices.__file__).resolve().parent
+# Calculate PACKAGE_ROOT from this file's location (avoids circular import)
+# config.py is at duplicate_invoices/config/config.py, so parent.parent is duplicate_invoices/
+PACKAGE_ROOT = pathlib.Path(__file__).resolve().parent.parent
 TRAINED_MODEL_DIR = PACKAGE_ROOT / "trained_models"
 EXTERNAL_MODEL_DIR = PACKAGE_ROOT / "external_models"
 

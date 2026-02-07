@@ -1,13 +1,38 @@
-from code1.src_load import read_table
-from duplicate_invoices.config.config import SCENARIO_TABLE_NAME,THRESHOLD_VALUE
-from rapidfuzz.distance import Levenshtein
-from flask import g
+"""
+Duplicate Invoice Extract Helper
+================================
+Provides similarity scoring and duplicate detection helper functions.
+"""
 import pandas as pd
 import uuid
 import networkx as nx
 from datetime import datetime
 import re
+from rapidfuzz.distance import Levenshtein
 
+# Import config with fallback for Docker/standalone deployment
+try:
+    from duplicate_invoices.config.config import SCENARIO_TABLE_NAME, THRESHOLD_VALUE
+except ImportError:
+    SCENARIO_TABLE_NAME = "scenarios"
+    THRESHOLD_VALUE = 60.0
+
+# Try to import code1 for database access (Flask app context)
+try:
+    from code1.src_load import read_table
+    _HAS_CODE1 = True
+except ImportError:
+    _HAS_CODE1 = False
+    def read_table(*args, **kwargs):
+        raise ImportError("code1 module not available in standalone/Docker mode")
+
+# Try to import Flask g for request context
+try:
+    from flask import g
+    _HAS_FLASK = True
+except ImportError:
+    _HAS_FLASK = False
+    g = None
 
 
 SCORE_THRESOLD = THRESHOLD_VALUE
