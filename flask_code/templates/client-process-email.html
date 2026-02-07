@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="html">
+
+<head>
+    <title>Client Email</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .custom-content {
+            font-family: Arial, sans-serif !important;
+            width: 980px;
+        }
+        .content-header {
+            color: #05265D;
+            font-weight: 600;
+            font-size: 32px;
+            text-align: center;
+            margin-top: 64px;
+        }
+
+        .mail-header {
+            background-color: #05265D;
+            height: 80px;
+        }
+
+        .mail-header div {
+            padding-top: 12px;
+            text-align: center;
+        }
+
+        .thead-fc {
+            border-radius: 9px 0px 0px 0px;
+        }
+
+        .thead-lc {
+            border-radius: 0px 9px 0px 0px;
+        }
+
+        .failure {
+            color: #EB4B26;   
+        }
+
+        .circle {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+
+        .font-10 {
+            font-size: 10px;
+        }
+
+        .circle-failure {
+            background-color: #EB4B26;
+        }
+
+        .circle-success {
+            background-color: #15C61C;
+        }
+        
+        .circle-idle {
+            background-color: #E3E2E2;
+        }
+        
+        .pipeline {
+            display: flex;
+            margin-top: 32px;
+        }
+        .progress {
+            width: 24px;
+        }
+        .pipeline-content {
+            display: flex;
+            margin: 12px 10% 64px 10%;
+        }
+        .pipeline-content span {
+            width: 25%;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+        }
+        .progress-line {
+            width: 33.33%;
+            border-top: 2px solid #15C61C;
+            display: block;
+            margin-top: 12px;
+        }
+
+        .progress-line-idle {
+            border-top: 2px solid #E3E2E2;
+        }
+        .table-heading {
+            color: #05265D;
+            font-size: 16px;
+            font-weight: bold;
+            padding-bottom: 12px;
+        }
+
+        table.success-summary {
+            width: 80%;
+            margin-left: 10%;
+        }
+        table.failure-summary {
+            width: 100%;
+        }
+        table {
+            border: 1px solid #30A4DC;
+            border-spacing: 0px;
+            border-radius: 10px;
+            margin-bottom: 32px;
+        }
+        thead {
+            border: none;
+            height: 40px;
+        }
+        
+        thead th:first-child {
+            border-radius: 9px 0px 0px 0px;
+        }
+
+        thead th:last-child {
+            border-radius: 0px 9px 0px 0px;
+        }
+        
+        thead th {
+            background-color: #30A4DC;
+            border-spacing: 0px;
+            border-collapse: collapse;
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        tbody tr {
+            min-height: 40px;
+            height: 40px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="custom-content">
+        <div class="mail-header">
+            <div>
+                <img src="{{ logo }}" alt="Thinkrisk">
+            </div>
+        </div>
+        <div class="content-header">
+            
+            {% if status == "success" %}
+                {{ process }} processing was a 
+                <span class="success">Success</span>
+            {% else %}
+                {{ failed_stage['value'] }} <br /> in 
+                {{ process }} processing was a 
+                <span class="failure">Failure</span>
+            {% endif %}
+        </div>
+
+        <div style="text-align: center;">
+            <img src="{{ icon }}"
+                alt="process success" style="width: 126px; margin-top: 32px;">
+        </div>
+
+        <div style="padding:0 20%;">
+            <div class="pipeline">
+                {% set failed_index = failed_stage and pipeline.index(failed_stage['value']) %}
+                {% for i in  range(pipeline|length) %}
+                <span class="progress">
+                    <div class="circle {{'circle-success' if failed_index == None or i < failed_index else 'circle-failure' if failed_index == i else 'circle-idle'}}">
+                    </div>
+                </span>
+                {% if i != pipeline|length -1 %}
+                    <div class="progress-line {{ 'progress-line-idle' if failed_index != None and i >= failed_index else '' }}"></div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="pipeline-content">
+            {% for stage in  pipeline %}
+                <span style="margin-left: 16px;">
+                    {{ stage }}
+                </span>
+            {% endfor %}
+        </div>
+        {% if failed_index == None or failed_index > 0 %}
+        <div class="details" style="text-align: center; margin-top: 24px;">
+            <div class="table-heading">Summary</div>
+            <table class="success-summary" aria-describedby="success summary">
+                <thead>
+                    <th class="thead-fc">Date</th>
+                    <th>Process</th>
+                    <th>Number of records</th>
+                    <th>Description</th>
+                    <th class="thead-lc">Time taken</th>
+                </thead>
+                <tbody>
+                    {% for stage in success_data %}
+                    <tr>
+                        <td>{{stage['date']}}</td>
+                        <td>{{stage['name']}}</td>
+                        <td>{{ stage['record_count'] }}</td>
+                        <td>{{ stage['description'] }}</td>
+                        <td>{{ stage['time_taken']}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+        {% if failed_index != None %}
+        <div class="details" style="text-align: center; margin-top: 24px;">
+            <div class="table-heading">Failure Summary</div>
+            <table class="failure-summary" aria-describedby="failure stage summary">
+                <thead>
+                    <th class="thead-fc">Date</th>
+                    {% if failed_index == 1 %}
+                        <th>Reason</th>
+                        <th>Column name</th>
+                        <th>Rows failed
+                            <div class="font-10">Failed / Total</div>
+                        </th>
+                    {% else %}
+                        <th>Description</th>
+                    {% endif %}
+                    <th class="thead-lc">Time taken</th>
+                </thead>
+                <tbody>
+                    {% for record in failure_data %}
+                    <tr>
+                        <td>{{ record['date']}}</td>
+                        {% if failed_stage['key'] == "DATA_HEALTH_CHECK_STATUS" %}
+                            <td>{{ record['reason'] }}</td>
+                            <td>{{ record['column_name'] }}</td>
+                            <td><span class="failure">{{record['failed_count']}} </span> / {{record['total_count']}}</td>
+                        {% else %}
+                            <td>{{ record['description'] }}</td>
+                        {% endif %}
+                        <td>{{ record['time_taken'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</body>
+
+</html>

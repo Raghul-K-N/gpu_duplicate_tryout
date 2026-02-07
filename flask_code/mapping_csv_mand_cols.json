@@ -1,0 +1,54 @@
+{
+  "expected_template_cols": [
+    "S.No",
+    "Column Names",
+    "Source Data Column",
+    "Data Type",
+    "Column Notes",
+    "Source Date Format",
+    "Requirement"
+  ],
+
+  "AP": {
+    "mandatory_fields": [
+      "Account Document Number",
+      "Transaction Description",
+      "Document Type",
+      "Amount",
+      "Entered By",
+      "Posted By",
+      "Company Code",
+      "Invoice Date",
+      "Invoice Number",
+      "Invoice Amount",
+      "Due Date",
+      "Payment Date",
+      "Supplier ID",
+      "Supplier Name",
+      "Payment Terms",
+      "Posted Date",
+      "Debit Credit Indicator",
+      "Entered Date"
+    ],
+    "expected_shape": [49, 7]
+  },
+  "GL": {
+    "mandatory_fields": [
+      "Account Document Number",
+      "Transaction Description",
+      "Document Type",
+      "Document Type Description",
+      "Amount",
+      "Entered By",
+      "Posted By",
+      "Account Description",
+      "Company ID",
+      "Posted Date",
+      "Debit Credit Indicator",
+      "Entered Time",
+      "SAP Account",
+      "Entered Date"
+    ],
+    "expected_shape": [65, 7]
+  }
+}

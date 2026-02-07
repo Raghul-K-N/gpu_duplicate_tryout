@@ -1,0 +1,42 @@
+# EKPO - Purchase order line Items Rename Mapping
+
+EKPO_RENAME_MAP = {
+    'MANDT':'CLIENT',
+    'LIFNR':'PO_ITEM_SUPPLIER_ID',
+    'EBELN':'PURCHASE_ORDER_NUMBER',
+    'EBELP':'PO_ITEM_NUMBER',
+    'BUKRS':'COMPANY_CODE',
+    'WERKS':'PLANT',
+    'PSTYP':'ITEM_CATEGORY',
+    'OIC_OLAND1':'ORIGIN_COUNTRY',
+    'OIC_OREGIO':'ORIGIN_REGION',
+    'OIC_DLAND1':'DESTINATION_COUNTRY',
+    'OIC_DREGIO':'DESTINATION_REGION',
+    'KO_PRCTR':'ACCOUNT_ASSIGNMENT_PROFIT_CENTER',
+    'AFNAM':'REQUISITIONER',
+    'TXZ01':'SHORT_TEXT_PO',
+    'MATNR':'PO_MATERIAL',
+    'EMATN':'OLD_MATERIAL_NUMBER',
+    'IDNLF':'ALTERNATIVE_MATERIAL_NUMBER',
+    'MENGE':'PO_QUANTITY',
+    'BPRME':'ORDER_UNIT',
+    'NETPR':'NET_PRICE',
+    'NETWR':'NET_ORDER_VALUE'
+
+}
+
+
+    # 'Del. Indicator':'DELETION_INDICATOR',
+    # 'Short Text':'SHORT_TEXT_PO',
+    # 'PO Quantity':'PO_QUANTITY',
+    # 'Order Unit':'ORDER_UNIT',
+    # 'Net Price':'NET_PRICE',
+    # 'Gross value':'GROSS_VALUE',
+    # 'Goods Receipt':'GOODS_RECEIPT',
+    # 'Item Category':'ITEM_CATEGORY',
+    # 'ERS':'EVALUATED_RECEIPT_SETTLEMENT',
+    # 'Origin':'ORIGIN',
+    # 'Orig.region':'ORIGIN_REGION',
+    # 'Destin.ctry':'DESTINATION_COUNTRY',
+    # 'Dest.region':'DESTINATION_REGION',
+    # 'Material':'PO_MATERIAL'

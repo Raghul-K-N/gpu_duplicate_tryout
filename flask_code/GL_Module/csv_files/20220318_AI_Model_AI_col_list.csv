@@ -1,0 +1,339 @@
+0
+SAME_QUARTER
+SAME_YEAR
+DAY_DIFFERENCE_POSTED_POSTING
+ENTERED_DATE_HOUR_SIN
+ENTERED_DATE_HOUR_COS
+ENTERED_DATE_DAY_SIN
+ENTERED_DATE_DAY_COS
+MONTH_SIN
+MONTH_COS
+LOG_AMOUNT
+MONTH_MEAN
+QTR_MEAN
+YR_MEAN
+MONTH_MEAN_DISTANCE
+QTR_MEAN_DISTANCE
+YR_MEAN_DISTANCE
+IS_WEEKEND
+DEBIT_CREDIT_INDICATOR_C
+DEBIT_CREDIT_INDICATOR_D
+DESCRIPTION_401k loan payments
+DESCRIPTION_a/r employee advances - other
+DESCRIPTION_accounts receivable clearing account
+DESCRIPTION_accruals - other
+DESCRIPTION_accruals-reversing
+DESCRIPTION_accrued auditing fees
+DESCRIPTION_accrued fringe benefits
+DESCRIPTION_accrued insurances
+DESCRIPTION_accrued legal & professional fees
+DESCRIPTION_accrued thyssenkrupp expenses
+DESCRIPTION_accrued voluntary benefits
+DESCRIPTION_accumulated amortization - manual account
+DESCRIPTION_accumulated depreciation - impair - building
+DESCRIPTION_accumulated depreciation - impair - manual
+DESCRIPTION_accumulated depreciation - manual - building
+DESCRIPTION_accumulated depreciation - manual - mach. & equipt
+DESCRIPTION_accumulated depreciation - other lessee
+DESCRIPTION_aflac withholdings
+DESCRIPTION_agency commissions
+DESCRIPTION_amortization
+DESCRIPTION_application development & management
+DESCRIPTION_application hosting
+DESCRIPTION_ar misc
+DESCRIPTION_assessment - outokumpu
+DESCRIPTION_audit fees
+DESCRIPTION_bad debt expense
+DESCRIPTION_bank charges
+DESCRIPTION_bank loan fees
+DESCRIPTION_bank notes - principal payments
+DESCRIPTION_bank notes payable  < 1y.
+DESCRIPTION_bank notes payable > 1y.
+DESCRIPTION_bank of tokyo - checking account
+DESCRIPTION_barge handling charges
+DESCRIPTION_buildings -self owned
+DESCRIPTION_buildings depr exp
+DESCRIPTION_business association & organization fees
+DESCRIPTION_car allowance - u.s. employee
+DESCRIPTION_check issuance account - disb
+DESCRIPTION_check issuance account - pr
+DESCRIPTION_circulation water
+DESCRIPTION_citibank delaware disbursement
+DESCRIPTION_clearing account
+DESCRIPTION_cm asset labor allocation
+DESCRIPTION_cm field execution allocation
+DESCRIPTION_cm field execution labor allocation
+DESCRIPTION_cm shift labor allocation
+DESCRIPTION_cogs - base slab price
+DESCRIPTION_cogs - substrate
+DESCRIPTION_company events
+DESCRIPTION_compressed air
+DESCRIPTION_conferences/conventions/seminars
+DESCRIPTION_consulting fees
+DESCRIPTION_consumption - maintenance labor
+DESCRIPTION_consumption - packaging
+DESCRIPTION_consumption - raw materials
+DESCRIPTION_consumption - spare parts inventory
+DESCRIPTION_consumption - subcontracting
+DESCRIPTION_customer claims
+DESCRIPTION_data center
+DESCRIPTION_dep care w/h
+DESCRIPTION_direct bonus
+DESCRIPTION_direct scheduled ot
+DESCRIPTION_direct unscheduled overtime
+DESCRIPTION_direct wages
+"DESCRIPTION_discounts, early payment"
+DESCRIPTION_donations - social and environment
+DESCRIPTION_downgrade variance
+DESCRIPTION_drug screen / pre-employment physical
+DESCRIPTION_electricity
+DESCRIPTION_emergency medical supplies
+DESCRIPTION_employee 401k contributions
+DESCRIPTION_employer 401k contribution
+DESCRIPTION_employer futa
+DESCRIPTION_employer medicare
+DESCRIPTION_employer social security
+DESCRIPTION_employer suta
+DESCRIPTION_emulsion breaking
+DESCRIPTION_environmental air pollution
+DESCRIPTION_environmental soil & nature protection
+DESCRIPTION_environmental water protection
+DESCRIPTION_expat - other
+DESCRIPTION_expat housing
+"DESCRIPTION_fees/costs - notary, court, other service"
+DESCRIPTION_fire & rescue equipment
+DESCRIPTION_fixed assets acquisition clearing accou
+DESCRIPTION_flexible savings plan w/h
+DESCRIPTION_foc deductions payable
+DESCRIPTION_freight  cost
+DESCRIPTION_freight - manual posting
+DESCRIPTION_freight cost - demurrage
+DESCRIPTION_freight cost - other unplanned
+DESCRIPTION_fresh water
+DESCRIPTION_fringe benefits - hourly
+DESCRIPTION_fringe benefits - salary
+DESCRIPTION_fuel - equipment
+DESCRIPTION_gain on sale of assets
+DESCRIPTION_goods in transit
+DESCRIPTION_gr / ir clearing account
+DESCRIPTION_haz mat supplies and services
+DESCRIPTION_housing - u.s. employee
+DESCRIPTION_hydrogen
+DESCRIPTION_indirect bonus
+DESCRIPTION_indirect scheduled ot
+DESCRIPTION_indirect unscheduled ot
+DESCRIPTION_indirect wages
+DESCRIPTION_insurance - general liability
+DESCRIPTION_insurance - marine cargo
+DESCRIPTION_insurance - other
+DESCRIPTION_insurance - prop. damage & bus. interruption
+DESCRIPTION_insurance - worker's compensation
+DESCRIPTION_interest expense - bank notes
+DESCRIPTION_interest expense - finance lease
+DESCRIPTION_interest expense - member loan notes - am
+DESCRIPTION_interest expense - member loan notes - nssmc
+DESCRIPTION_interest expense - working capital line of credit
+"DESCRIPTION_interest income - fin rec to 3rd party, loan, dtd"
+DESCRIPTION_interest payable
+DESCRIPTION_interest payable -  swap
+DESCRIPTION_interest payable member loan notes - am
+DESCRIPTION_interest payable member loan notes - nssmc
+DESCRIPTION_interest rate swap
+DESCRIPTION_internal material transportation
+DESCRIPTION_internal transportation charges
+DESCRIPTION_inventory adj. acct. - fin. goods
+DESCRIPTION_inventory adj. acct. - other
+DESCRIPTION_inventory adj. acct. - raw material
+DESCRIPTION_inventory adj. acct. - substrate
+DESCRIPTION_inventory adjustment
+DESCRIPTION_it cost allocation
+DESCRIPTION_it hardware supplies
+DESCRIPTION_it support services
+DESCRIPTION_lan wan network
+DESCRIPTION_lawsuit risks < 1y.
+DESCRIPTION_legal & professional fees
+DESCRIPTION_less tenant improvements paid
+DESCRIPTION_less tenant improvements paid - manual
+DESCRIPTION_license & fees expense
+DESCRIPTION_lockbox account
+DESCRIPTION_loss on disposal of assets
+DESCRIPTION_lt derivative mark to market other commodities
+DESCRIPTION_m&e depreciation expense
+DESCRIPTION_machine tools
+DESCRIPTION_maint. bonus
+DESCRIPTION_maint. scheduled overtime
+DESCRIPTION_maint. unscheduled overtime
+DESCRIPTION_maint. wages
+DESCRIPTION_meeting meal expense
+DESCRIPTION_member loans notes payable - am < 1yr
+DESCRIPTION_member loans notes payable - nssmc < 1 yr
+DESCRIPTION_member loans notes payable - nssmc > 1 yr
+DESCRIPTION_misc cost adjustment
+DESCRIPTION_misc. other financial liabilities - oth
+DESCRIPTION_mizuho capital expenditure
+DESCRIPTION_mizuho concentration
+DESCRIPTION_mizuho disbursement
+DESCRIPTION_mizuho foreign trade investments
+DESCRIPTION_mizuho loc holding account
+DESCRIPTION_mizuho payroll account
+DESCRIPTION_natural gas
+DESCRIPTION_nitrogen
+DESCRIPTION_notes payables - gator project > 1
+DESCRIPTION_oci - interest rate swap
+DESCRIPTION_office cleaning & services
+DESCRIPTION_office equipment & supplies
+DESCRIPTION_office furniture & fixtures
+DESCRIPTION_ohio cat tax
+DESCRIPTION_operational consumables & expenditures
+DESCRIPTION_operational wear parts
+DESCRIPTION_operational wear parts labor
+DESCRIPTION_osp freight
+DESCRIPTION_osp storage fees
+DESCRIPTION_osp value added tax (vat)
+DESCRIPTION_other accrued payroll expense
+DESCRIPTION_other current prepayments - miscellaneo
+DESCRIPTION_other employee expenses
+DESCRIPTION_other hourly payroll liabilities
+DESCRIPTION_other leave wages
+DESCRIPTION_other lessee depreciation expense
+DESCRIPTION_other misc. expense
+DESCRIPTION_other payroll liabilities
+DESCRIPTION_other revenue - manual posting
+DESCRIPTION_other taxes - provisions
+DESCRIPTION_outbound handling - finished goods
+DESCRIPTION_outsourced services
+"DESCRIPTION_outstanding checks, wires & achs"
+DESCRIPTION_pay.fr. pp&e - adjustment account
+DESCRIPTION_pay.fr.purchase ppe clearing
+DESCRIPTION_payables from wc revolving line of credit
+DESCRIPTION_payroll clearing
+DESCRIPTION_payroll tax clearing
+DESCRIPTION_payroll taxes
+DESCRIPTION_penalties & fines
+DESCRIPTION_personal property tax
+DESCRIPTION_plant & equipment cleaning & waste
+DESCRIPTION_postage & shipping - office only
+DESCRIPTION_prepaid insurance premiums
+DESCRIPTION_processing cost
+DESCRIPTION_production receipt - finished goods
+DESCRIPTION_property tax payable
+DESCRIPTION_public relations
+DESCRIPTION_purchase price variances (prd)
+DESCRIPTION_purchase spare parts price variances
+DESCRIPTION_quality assurance
+DESCRIPTION_r & m and rents - rentals
+DESCRIPTION_real property tax
+DESCRIPTION_rebates - settlement
+DESCRIPTION_rec.fr.affili.comp. - adjustment acct
+DESCRIPTION_receivables fr. affiliated comp./non-po
+DESCRIPTION_recruiting
+DESCRIPTION_relocation - non-taxable
+DESCRIPTION_relocation - taxable
+DESCRIPTION_rent - auto
+DESCRIPTION_rent - building
+DESCRIPTION_rent - equipment
+DESCRIPTION_rent - office equipment
+DESCRIPTION_rent - other
+DESCRIPTION_repair & mainenance - cranes
+DESCRIPTION_repairs & maintenance - buildings & grounds
+DESCRIPTION_repairs & maintenance - machinery & equipment
+DESCRIPTION_repairs & maintenance - other
+DESCRIPTION_repairs & maintenance - refurb labor
+DESCRIPTION_repairs & maintenance - services
+DESCRIPTION_repairs & maintenance - vehicles
+DESCRIPTION_reserve for lower cost/market - fin. goods
+DESCRIPTION_reserve for lower cost/market - raw mat'l
+DESCRIPTION_reserve for spare parts
+DESCRIPTION_reserve from lower than cost/market
+DESCRIPTION_roll consumption/processing
+DESCRIPTION_roll consumption/processing labor
+DESCRIPTION_roll shop cost
+DESCRIPTION_royalty - production
+DESCRIPTION_safety equipment
+DESCRIPTION_salaries - base wages
+DESCRIPTION_salaries - expat pay
+DESCRIPTION_salaries - other wages
+DESCRIPTION_salaries - overtime
+DESCRIPTION_salaries - service premium bonus
+DESCRIPTION_salaries - temp labor
+DESCRIPTION_scrap
+DESCRIPTION_security
+DESCRIPTION_settlement to auc
+DESCRIPTION_slab handling charges
+DESCRIPTION_software licenses & maintenance
+"DESCRIPTION_software,web-site/manual account"
+DESCRIPTION_spare parts inventory adjustment
+DESCRIPTION_state/franchise taxes (not allocable)
+DESCRIPTION_steam
+DESCRIPTION_subscriptions - books/magazines/periodicals
+"DESCRIPTION_technical machinery,equipm.-self owned - manual"
+DESCRIPTION_technical support services
+DESCRIPTION_telephone & radio
+DESCRIPTION_telephone - cell
+DESCRIPTION_tolerance - write-offs
+DESCRIPTION_trade accounts payable
+DESCRIPTION_trade accounts payable - adjustment acct
+DESCRIPTION_trade accounts payable clearing
+DESCRIPTION_trade accounts payable substrate reserve
+DESCRIPTION_trade accounts receivable -  general allowance
+DESCRIPTION_trade accounts receivable - customer claims
+DESCRIPTION_trade accounts receivable - domestic
+DESCRIPTION_trade accounts receivable - export
+DESCRIPTION_trade acct recv - rebate accrual
+DESCRIPTION_training expense
+"DESCRIPTION_travel - fuel, tolls, mileage & parking"
+DESCRIPTION_travel expense - accomodation
+DESCRIPTION_travel expense - airfare
+DESCRIPTION_travel expense - car rental
+DESCRIPTION_travel expense - meal & entertainment
+DESCRIPTION_travel expense - miscellaneous
+DESCRIPTION_tuition reimbursement plan
+DESCRIPTION_uniforms
+DESCRIPTION_use tax liability account- self assessm
+DESCRIPTION_wire transfers - in - fund
+DESCRIPTION_wire transfers - out - fund
+DOC_TYPE_DG
+DOC_TYPE_DR
+DOC_TYPE_KG
+DOC_TYPE_KR
+DOC_TYPE_SA
+ENTERED_BY_10270802
+ENTERED_BY_10364537
+ENTERED_BY_10380091
+ENTERED_BY_10500061
+ENTERED_BY_10500452
+ENTERED_BY_10500661
+ENTERED_BY_10500687
+ENTERED_BY_10500841
+ENTERED_BY_10500945
+ENTERED_BY_10501228
+ENTERED_BY_10501376
+ENTERED_BY_10501400
+ENTERED_BY_10501479
+ENTERED_BY_10501541
+ENTERED_BY_FF_RTR_5
+ENTERED_BY_FF_RTR_6
+POSTED_BY_10500082.0
+POSTED_BY_10500120.0
+POSTED_BY_10500452.0
+POSTED_BY_10500687.0
+COMPANY_CODE_1000
+ENTERED_DATE_WEEKDAY_0
+ENTERED_DATE_WEEKDAY_1
+ENTERED_DATE_WEEKDAY_2
+ENTERED_DATE_WEEKDAY_3
+ENTERED_DATE_WEEKDAY_4
+ENTERED_DATE_WEEKDAY_5
+ENTERED_DATE_WEEKDAY_6
+ENTERED_DATE_MONTH_NUMBER_1
+ENTERED_DATE_MONTH_NUMBER_2
+ENTERED_DATE_MONTH_NUMBER_3
+ENTERED_DATE_MONTH_NUMBER_4
+ENTERED_DATE_MONTH_NUMBER_5
+ENTERED_DATE_MONTH_NUMBER_6
+ENTERED_DATE_MONTH_NUMBER_7
+ENTERED_DATE_MONTH_NUMBER_8
+ENTERED_DATE_MONTH_NUMBER_9
+ENTERED_DATE_MONTH_NUMBER_10
+ENTERED_DATE_MONTH_NUMBER_11
+ENTERED_DATE_MONTH_NUMBER_12

@@ -1,0 +1,1335 @@
+2022-07-27 18:01:55,575 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          17           22        0.772727  replace          3  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 580 columns] Predictions: {'predictions': array(['False Positives'], dtype=object), 'version': '0.0.1'}
+2022-07-27 18:02:14,428 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          17           22        0.772727  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array(['False Positives'], dtype=object), 'version': '0.0.1'}
+2022-07-27 18:02:28,880 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          17           19        0.894737  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array(['Possible Duplicate'], dtype=object), 'version': '0.0.1'}
+2022-07-27 18:02:38,031 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          17           22        0.772727  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array(['Possible Duplicate'], dtype=object), 'version': '0.0.1'}
+2022-07-27 18:02:50,556 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          17           22        0.772727  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array(['False Positives'], dtype=object), 'version': '0.0.1'}
+2022-07-27 18:03:07,395 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          17           19        0.894737  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array(['Possible Duplicate'], dtype=object), 'version': '0.0.1'}
+2022-07-27 18:03:12,545 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          17           22        0.772727  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array(['False Positives'], dtype=object), 'version': '0.0.1'}
+2022-07-27 18:03:53,447 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          17           22        0.772727  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array([[0.75960654, 0.24039346]]), 'version': '0.0.1'}
+2022-07-27 18:04:26,783 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          17           20            0.85  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 547 columns] Predictions: {'predictions': array([[0.99660589, 0.00339411]]), 'version': '0.0.1'}
+2022-07-27 18:04:33,516 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          17           19        0.894737  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array([[0.21958444, 0.78041556]]), 'version': '0.0.1'}
+2022-07-27 18:04:41,404 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest  num_src_clusters  \
+0          17           17             1.0                 0   
+
+   num_dest_clusters  ...  cluster_15_start  cluster_15_end  src_pos_33  \
+0                  0  ...                -1              -1          -1   
+
+   dest_pos_33  delta_dest_pos_33  
+0           -1                 -1  
+
+[1 rows x 500 columns] Predictions: {'predictions': array([[0.03563189, 0.96436811]]), 'version': '0.0.1'}
+2022-07-27 18:05:04,457 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest  num_src_clusters  \
+0          17           17             1.0                 0   
+
+   num_dest_clusters  ...  cluster_15_start  cluster_15_end  src_pos_33  \
+0                  0  ...                -1              -1          -1   
+
+   dest_pos_33  delta_dest_pos_33  
+0           -1                 -1  
+
+[1 rows x 500 columns] Predictions: {'predictions': array([[0.03563189, 0.96436811]]), 'version': '0.0.1'}
+2022-07-27 18:05:10,927 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          17           19        0.894737  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array([[0.00695534, 0.99304466]]), 'version': '0.0.1'}
+2022-07-27 18:05:19,376 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          17           19        0.894737  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array([[0.01009838, 0.98990162]]), 'version': '0.0.1'}
+2022-07-27 18:05:25,489 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          17           18        0.944444  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.17525154, 0.82474846]]), 'version': '0.0.1'}
+2022-07-27 18:05:31,068 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          17           17             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.51239516, 0.48760484]]), 'version': '0.0.1'}
+2022-07-27 18:05:39,444 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          17           17             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.84929567, 0.15070433]]), 'version': '0.0.1'}
+2022-07-27 18:06:41,920 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          18           17        1.058824  delete          A  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 540 columns] Predictions: {'predictions': array([[9.99786115e-01, 2.13885455e-04]]), 'version': '0.0.1'}
+2022-07-27 18:06:57,502 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          17           17             1.0  replace          A  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 540 columns] Predictions: {'predictions': array([[9.99514445e-01, 4.85554981e-04]]), 'version': '0.0.1'}
+2022-07-27 18:07:05,411 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          17           17             1.0  replace          4  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 540 columns] Predictions: {'predictions': array([[9.99994758e-01, 5.24204741e-06]]), 'version': '0.0.1'}
+2022-07-27 18:07:15,414 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          19           17        1.117647  delete          .  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 547 columns] Predictions: {'predictions': array([[9.99370225e-01, 6.29774534e-04]]), 'version': '0.0.1'}
+2022-07-27 18:07:41,330 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          19           17        1.117647  delete          .  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array([[0.00327421, 0.99672579]]), 'version': '0.0.1'}
+2022-07-27 18:07:51,208 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          24           17        1.411765  delete          .  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 563 columns] Predictions: {'predictions': array([[0.07197683, 0.92802317]]), 'version': '0.0.1'}
+2022-07-27 18:07:59,642 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          17           17             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.89235816, 0.10764184]]), 'version': '0.0.1'}
+2022-07-27 18:08:10,359 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          17           17             1.0  replace          9  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.98273803, 0.01726197]]), 'version': '0.0.1'}
+2022-07-28 10:13:04,781 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           9            9             1.0  replace          0  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array([[9.99539475e-01, 4.60525196e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:27,520 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           9            9             1.0  replace          0  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array([[9.99539475e-01, 4.60525196e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:27,570 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0           8            9        0.888889  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99720986, 0.00279014]]), 'version': '0.0.1'}
+2022-07-28 10:14:27,624 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0           8            9        0.888889  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99720986, 0.00279014]]), 'version': '0.0.1'}
+2022-07-28 10:14:27,666 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0           8            9        0.888889  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[0.99197345, 0.00802655]]), 'version': '0.0.1'}
+2022-07-28 10:14:27,716 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0           8            9        0.888889  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[0.99197345, 0.00802655]]), 'version': '0.0.1'}
+2022-07-28 10:14:27,766 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           9            9             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.93425484, 0.06574516]]), 'version': '0.0.1'}
+2022-07-28 10:14:27,815 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           9            9             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[9.99994474e-01, 5.52564526e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:27,869 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           9            9             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[9.99994474e-01, 5.52564526e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:27,913 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           9            9             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[9.99994474e-01, 5.52564526e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:27,963 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           9            9             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[9.99994474e-01, 5.52564526e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,013 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           9            9             1.0  replace          0  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.93425484, 0.06574516]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,065 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 547 columns] Predictions: {'predictions': array([[9.99988247e-01, 1.17525717e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,125 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array([[9.99986836e-01, 1.31642547e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,176 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          4  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array([[9.99846805e-01, 1.53195321e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,225 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array([[9.99999686e-01, 3.13914597e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,269 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 563 columns] Predictions: {'predictions': array([[0.99601552, 0.00398448]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,433 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 548 columns] Predictions: {'predictions': array([[9.99977383e-01, 2.26173252e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,503 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 549 columns] Predictions: {'predictions': array([[9.99852480e-01, 1.47519772e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,563 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          2  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99584279e-01, 4.15721018e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,616 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 554 columns] Predictions: {'predictions': array([[9.99986731e-01, 1.32690683e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,686 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          2  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 587 columns] Predictions: {'predictions': array([[9.99998701e-01, 1.29875771e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,805 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          18           18             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.84227337, 0.15772663]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,874 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          18           18             1.0  replace          0  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array([[0.99305705, 0.00694295]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,928 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          18           18             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.84227337, 0.15772663]]), 'version': '0.0.1'}
+2022-07-28 10:14:28,977 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          18           18             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 534 columns] Predictions: {'predictions': array([[0.66324891, 0.33675109]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,032 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          18           18             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 534 columns] Predictions: {'predictions': array([[0.66324891, 0.33675109]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,083 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          11           11             1.0  replace          9  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 535 columns] Predictions: {'predictions': array([[9.99831982e-01, 1.68017547e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,137 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          10           11        0.909091  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.00656108, 0.99343892]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,190 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          11           11             1.0  replace          3  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array([[0.99859732, 0.00140268]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,257 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          18           18             1.0  replace          8  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 535 columns] Predictions: {'predictions': array([[9.99976903e-01, 2.30971916e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,320 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           9            9             1.0  replace          2  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.98894547, 0.01105453]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,388 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          4  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,440 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          8  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 540 columns] Predictions: {'predictions': array([[9.99999992e-01, 7.68380804e-09]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,503 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 535 columns] Predictions: {'predictions': array([[9.99941639e-01, 5.83609106e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,554 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          2  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array([[9.99180261e-01, 8.19739197e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,611 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 567 columns] Predictions: {'predictions': array([[9.99978004e-01, 2.19964161e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,667 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 548 columns] Predictions: {'predictions': array([[9.99977383e-01, 2.26173252e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,725 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,777 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99998180e-01, 1.81983919e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,833 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          3  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,890 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 554 columns] Predictions: {'predictions': array([[9.99998920e-01, 1.08002814e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:29,946 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99998180e-01, 1.81983919e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,005 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          9  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 574 columns] Predictions: {'predictions': array([[9.99999929e-01, 7.06595717e-08]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,060 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 563 columns] Predictions: {'predictions': array([[0.99601552, 0.00398448]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,110 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest  num_src_clusters  \
+0          16           16             1.0                 0   
+
+   num_dest_clusters  ...  cluster_15_start  cluster_15_end  src_pos_33  \
+0                  0  ...                -1              -1          -1   
+
+   dest_pos_33  delta_dest_pos_33  
+0           -1                 -1  
+
+[1 rows x 500 columns] Predictions: {'predictions': array([[0.03563189, 0.96436811]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,161 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          16           16             1.0  replace          A  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.25763432, 0.74236568]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,212 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          16           16             1.0  replace          A  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 521 columns] Predictions: {'predictions': array([[0.25763432, 0.74236568]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,261 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest  num_src_clusters  \
+0          15           15             1.0                 0   
+
+   num_dest_clusters  ...  cluster_15_start  cluster_15_end  src_pos_33  \
+0                  0  ...                -1              -1          -1   
+
+   dest_pos_33  delta_dest_pos_33  
+0           -1                 -1  
+
+[1 rows x 500 columns] Predictions: {'predictions': array([[0.03563189, 0.96436811]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,316 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           7            7             1.0  replace          8  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 530 columns] Predictions: {'predictions': array([[9.99877160e-01, 1.22840487e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,369 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           7            7             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 523 columns] Predictions: {'predictions': array([[0.94709329, 0.05290671]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,416 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           7            7             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 523 columns] Predictions: {'predictions': array([[0.94709329, 0.05290671]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,465 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           7            7             1.0  replace          4  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 523 columns] Predictions: {'predictions': array([[0.94709329, 0.05290671]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,519 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           7            7             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 537 columns] Predictions: {'predictions': array([[9.99994926e-01, 5.07390930e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,570 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           7            7             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 530 columns] Predictions: {'predictions': array([[9.99877160e-01, 1.22840487e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,632 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0           7            7             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 537 columns] Predictions: {'predictions': array([[9.99994926e-01, 5.07390930e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,694 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0           7            7             1.0  delete          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 541 columns] Predictions: {'predictions': array([[9.99983248e-01, 1.67521887e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,741 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          14           14             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 555 columns] Predictions: {'predictions': array([[9.99985971e-01, 1.40287396e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,793 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          14           14             1.0  replace          4  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 537 columns] Predictions: {'predictions': array([[9.99983386e-01, 1.66141112e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,850 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          14           14             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 544 columns] Predictions: {'predictions': array([[9.99981843e-01, 1.81574005e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,912 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          14           14             1.0  replace          8  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 530 columns] Predictions: {'predictions': array([[9.99848931e-01, 1.51069002e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:30,963 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          14           14             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 528 columns] Predictions: {'predictions': array([[9.99262186e-01, 7.37813658e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,018 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          14           14             1.0  delete          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 541 columns] Predictions: {'predictions': array([[9.99998620e-01, 1.37958867e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,076 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          14           14             1.0  replace          3  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 523 columns] Predictions: {'predictions': array([[0.96353877, 0.03646123]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,134 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          14           14             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 549 columns] Predictions: {'predictions': array([[9.99348762e-01, 6.51238314e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,196 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,250 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          4  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 566 columns] Predictions: {'predictions': array([[9.99999748e-01, 2.51594048e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,310 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 563 columns] Predictions: {'predictions': array([[0.99601552, 0.00398448]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,364 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          8  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,553 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array([[9.99996606e-01, 3.39437566e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,604 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          0  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 549 columns] Predictions: {'predictions': array([[9.99852480e-01, 1.47519772e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,669 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[9.99351709e-01, 6.48291080e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,719 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99496572e-01, 5.03428133e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,780 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 575 columns] Predictions: {'predictions': array([[9.99321279e-01, 6.78720575e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,841 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 575 columns] Predictions: {'predictions': array([[9.99997463e-01, 2.53745526e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,904 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 554 columns] Predictions: {'predictions': array([[9.99993635e-01, 6.36454243e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:31,959 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 555 columns] Predictions: {'predictions': array([[9.99998661e-01, 1.33877270e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,011 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[9.99351709e-01, 6.48291080e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,067 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99564054e-01, 4.35946480e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,113 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 580 columns] Predictions: {'predictions': array([[9.99169611e-01, 8.30389451e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,170 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 581 columns] Predictions: {'predictions': array([[9.99999909e-01, 9.11133111e-08]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,216 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 554 columns] Predictions: {'predictions': array([[9.99998534e-01, 1.46565449e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,267 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99756479e-01, 2.43520674e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,314 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 575 columns] Predictions: {'predictions': array([[9.99973017e-01, 2.69827037e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,367 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 575 columns] Predictions: {'predictions': array([[9.99979067e-01, 2.09331283e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,412 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 573 columns] Predictions: {'predictions': array([[9.99985819e-01, 1.41810308e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,459 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array([[9.99997624e-01, 2.37603690e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,512 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[9.99895107e-01, 1.04893084e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,558 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 570 columns] Predictions: {'predictions': array([[0.98921192, 0.01078808]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,614 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 570 columns] Predictions: {'predictions': array([[0.98921192, 0.01078808]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,672 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array([[9.99846805e-01, 1.53195321e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,723 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 581 columns] Predictions: {'predictions': array([[9.99941912e-01, 5.80883513e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,778 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 581 columns] Predictions: {'predictions': array([[9.99989651e-01, 1.03489262e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,826 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 587 columns] Predictions: {'predictions': array([[9.99999652e-01, 3.47780881e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,867 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          2  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array([[9.99995374e-01, 4.62649504e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,908 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          8  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 575 columns] Predictions: {'predictions': array([[9.99321279e-01, 6.78720575e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,952 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 580 columns] Predictions: {'predictions': array([[9.99972477e-01, 2.75226803e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:32,993 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99998958e-01, 1.04212462e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,034 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 573 columns] Predictions: {'predictions': array([[9.99999756e-01, 2.44262561e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,085 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99999531e-01, 4.69077671e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,138 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          3  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 574 columns] Predictions: {'predictions': array([[9.99999434e-01, 5.66221865e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,176 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          3  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 563 columns] Predictions: {'predictions': array([[0.99601552, 0.00398448]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,217 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,262 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 547 columns] Predictions: {'predictions': array([[9.99999997e-01, 2.86776815e-09]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,309 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,353 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  delete          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 547 columns] Predictions: {'predictions': array([[9.99997633e-01, 2.36709146e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,394 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          2  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,433 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          2  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,495 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 554 columns] Predictions: {'predictions': array([[9.99986731e-01, 1.32690683e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,534 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 563 columns] Predictions: {'predictions': array([[0.99601552, 0.00398448]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,578 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 549 columns] Predictions: {'predictions': array([[9.99852480e-01, 1.47519772e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,622 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 549 columns] Predictions: {'predictions': array([[9.99852480e-01, 1.47519772e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,673 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,734 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99999358e-01, 6.42163142e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,776 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99999358e-01, 6.42163142e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,819 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array([[9.99996606e-01, 3.39437566e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,870 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          2  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 563 columns] Predictions: {'predictions': array([[0.99601552, 0.00398448]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,916 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 582 columns] Predictions: {'predictions': array([[9.99838155e-01, 1.61844743e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:33,957 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          2  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 563 columns] Predictions: {'predictions': array([[0.99601552, 0.00398448]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,006 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          9  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 570 columns] Predictions: {'predictions': array([[0.98921192, 0.01078808]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,059 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          9  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99429611e-01, 5.70388767e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,115 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 573 columns] Predictions: {'predictions': array([[9.99999617e-01, 3.82949165e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,291 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 594 columns] Predictions: {'predictions': array([[9.99988483e-01, 1.15167131e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,340 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          8  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 587 columns] Predictions: {'predictions': array([[9.99998994e-01, 1.00612257e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,392 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          4  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 549 columns] Predictions: {'predictions': array([[9.99852480e-01, 1.47519772e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,448 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          9  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 575 columns] Predictions: {'predictions': array([[9.99994321e-01, 5.67869834e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,500 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          2  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 567 columns] Predictions: {'predictions': array([[9.99999273e-01, 7.26897579e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,551 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 554 columns] Predictions: {'predictions': array([[9.99998714e-01, 1.28594214e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,658 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 573 columns] Predictions: {'predictions': array([[9.99887513e-01, 1.12487057e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,710 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 549 columns] Predictions: {'predictions': array([[9.99992346e-01, 7.65383373e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,766 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          2  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,826 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[9.99351709e-01, 6.48291080e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,881 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 573 columns] Predictions: {'predictions': array([[9.99998914e-01, 1.08645450e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,930 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          0  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 561 columns] Predictions: {'predictions': array([[9.99996929e-01, 3.07098416e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:34,973 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[0.99682083, 0.00317917]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,018 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          0  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[9.99351709e-01, 6.48291080e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,056 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[9.99351709e-01, 6.48291080e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,108 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[0.9988686, 0.0011314]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,152 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          1  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,200 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          8  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 556 columns] Predictions: {'predictions': array([[9.99351709e-01, 6.48291080e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,250 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          8  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 549 columns] Predictions: {'predictions': array([[9.99992346e-01, 7.65383373e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,301 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          3  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 554 columns] Predictions: {'predictions': array([[9.99998534e-01, 1.46565449e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,358 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 573 columns] Predictions: {'predictions': array([[9.99999335e-01, 6.64785995e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,410 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          8  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 554 columns] Predictions: {'predictions': array([[9.99998561e-01, 1.43905626e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,467 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99999358e-01, 6.42163142e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,519 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          4  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,576 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 575 columns] Predictions: {'predictions': array([[9.99981492e-01, 1.85082675e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,631 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 548 columns] Predictions: {'predictions': array([[9.99977383e-01, 2.26173252e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,692 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  delete          4  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 553 columns] Predictions: {'predictions': array([[9.99999851e-01, 1.49194506e-07]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,741 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          4  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 547 columns] Predictions: {'predictions': array([[9.99999997e-01, 2.86776815e-09]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,792 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          5  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 563 columns] Predictions: {'predictions': array([[0.99601552, 0.00398448]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,845 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 535 columns] Predictions: {'predictions': array([[9.99995668e-01, 4.33197211e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,907 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 554 columns] Predictions: {'predictions': array([[9.99986731e-01, 1.32690683e-05]]), 'version': '0.0.1'}
+2022-07-28 10:14:35,953 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          7  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:36,007 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 588 columns] Predictions: {'predictions': array([[9.99737766e-01, 2.62233981e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:36,062 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 575 columns] Predictions: {'predictions': array([[9.99992086e-01, 7.91405835e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:36,118 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 568 columns] Predictions: {'predictions': array([[9.99564054e-01, 4.35946480e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:36,166 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 554 columns] Predictions: {'predictions': array([[9.99998714e-01, 1.28594214e-06]]), 'version': '0.0.1'}
+2022-07-28 10:14:36,222 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          3  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:36,274 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:36,328 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          4  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 540 columns] Predictions: {'predictions': array([[9.99999981e-01, 1.91244294e-08]]), 'version': '0.0.1'}
+2022-07-28 10:14:36,375 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          9  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 549 columns] Predictions: {'predictions': array([[9.99852480e-01, 1.47519772e-04]]), 'version': '0.0.1'}
+2022-07-28 10:14:36,428 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest     op_0 src_char_0  ...  \
+0          13           13             1.0  replace          6  ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 542 columns] Predictions: {'predictions': array([[0.99544538, 0.00455462]]), 'version': '0.0.1'}
+2022-07-28 10:14:36,486 [INFO]  invoice_number_similarity.predict - make_prediction:60 - Making predictions with model version: 0.0.1 Inputs:    length_src  length_dest  ratio_src_dest    op_0 src_char_0  ...  \
+0          13           13             1.0  insert             ...   
+
+  cluster_15_start cluster_15_end src_pos_33  dest_pos_33  delta_dest_pos_33  
+0               -1             -1         -1           -1                 -1  
+
+[1 rows x 547 columns] Predictions: {'predictions': array([[9.99988247e-01, 1.17525717e-05]]), 'version': '0.0.1'}

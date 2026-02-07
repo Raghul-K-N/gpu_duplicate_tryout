@@ -1,0 +1,112 @@
+flowchart LR
+    %% Styles
+    classDef sourceTable fill:#e3f2fd,stroke:#1565c0,color:#0d47a1;
+    classDef intermediate fill:#f3e5f5,stroke:#7b1fa2,color:#4a148c;
+    classDef finalOutput fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
+    linkStyle default interpolate basis;
+
+    subgraph Phase1["PHASE 1: INVOICE CORE BUILD"]
+        BSEG["BSEG<br/>Line Item"]:::sourceTable
+        BKPF["BKPF<br/>Doc Header"]:::sourceTable
+        BSEG --> |"Keys: CLIENT, CO_CODE,<br/>DOC_NUM, FY"| CORE1["BSEG + BKPF<br/>Base Data"]:::intermediate
+        BKPF --> CORE1
+        
+        WTH["WITH_ITEM<br/>WHT (Grouped)"]:::sourceTable
+        CORE1 --> |"+ WITH_ITEM"| CORE2["+ WITH_ITEM"]:::intermediate
+        WTH --> CORE2
+        
+        T003["T003<br/>Doc Types"]:::sourceTable
+        CORE2 --> |"+ T003 Keys:<br/>CLIENT, DOC_TYPE"| CORE3["+ T003"]:::intermediate
+        T003 --> CORE3
+        
+        RETINV["RETINV<br/>Return Invoices"]:::sourceTable
+        CORE3 --> |"+ RETINV Keys:<br/>CLIENT, VIM_OBJ_KEY"| CORE4["+ RETINV"]:::intermediate
+        RETINV --> CORE4
+        
+        UDC["UDC<br/>User Def. Cols"]:::sourceTable
+        CORE4 --> |"+ UDC"| INVOICE_CORE["INVOICE_CORE<br/>✓ Complete Line Item Data"]:::intermediate
+        UDC --> INVOICE_CORE
+    end
+    
+    subgraph Phase2["PHASE 2: CO. CODE ENRICH"]
+        T001["T001<br/>Company Master"]:::sourceTable
+        INVOICE_CORE --> |"+ T001 Keys:<br/>CLIENT, CO_CODE"| COMP["+ Company Master"]:::intermediate
+        T001 --> COMP
+    end
+    
+    subgraph Phase3["PHASE 3: PMT TERMS ENRICH"]
+        T052U["T052U<br/>Payment Terms"]:::sourceTable
+        COMP --> |"+ T052U Keys:<br/>CLIENT, PMT_TERMS"| PMT_TERMS["+ Payment Terms"]:::intermediate
+        T052U --> PMT_TERMS
+    end
+    
+    subgraph Phase4["PHASE 4: PMT METHOD ENRICH"]
+        T042Z["T042Z<br/>Payment Methods"]:::sourceTable
+        PMT_TERMS --> |"+ T042Z Keys:<br/>CLIENT, LE_COUNTRY,<br/>PMT_METHOD"| PMT_METHOD["+ Payment Method"]:::intermediate
+        T042Z --> PMT_METHOD
+    end
+    
+    subgraph Phase5["PHASE 5: REASON CODE ENRICH"]
+        T053S["T053S<br/>Reason Codes"]:::sourceTable
+        PMT_METHOD --> |"+ T053S Keys:<br/>CLIENT, REASON_CODE"| REASON["+ Reason Codes"]:::intermediate
+        T053S --> REASON
+    end
+    
+    subgraph Phase6["PHASE 6: PO ENRICH"]
+        EKKO["EKKO<br/>PO Headers"]:::sourceTable
+        EKPO["EKPO<br/>PO Items"]:::sourceTable
+        EKKO --> |"Keys: CLIENT,<br/>PO_NUMBER"| PO_MERGED["EKKO + EKPO"]:::intermediate
+        EKPO --> PO_MERGED
+        REASON --> |"+ PO Info"| PO_DATA["+ PO Data"]:::intermediate
+        PO_MERGED --> PO_DATA
+    end
+    
+    subgraph Phase7["PHASE 7: VENDOR MASTER ENRICH"]
+        LFA1["LFA1<br/>General Vendor"]:::sourceTable
+        LFB1["LFB1<br/>Company Code"]:::sourceTable
+        LFBK["LFBK<br/>Bank Details"]:::sourceTable
+        LFB1 --> |"Keys: CLIENT,<br/>SUPPLIER_ID"| VM1["LFA1 + LFB1"]:::intermediate
+        LFA1 --> VM1
+        VM1 --> |"+ LFBK"| VM_CORE["Vendor Master Core"]:::intermediate
+        LFBK --> VM_CORE
+        PO_DATA --> |"+ Vendor Master Keys:<br/>CLIENT, SUPPLIER_ID,<br/>CO_CODE"| VENDOR["+ Vendor Data"]:::intermediate
+        VM_CORE --> VENDOR
+    end
+    
+    subgraph Phase8["PHASE 8: VIM ENRICH"]
+        VIM_["VIM_<br/>Invoice Mgmt"]:::sourceTable
+        VIMT100["VIMT100<br/>Doc Type Desc"]:::sourceTable
+        VIMT101["VIMT101<br/>Status Desc"]:::sourceTable
+        VIM_ --> |"Keys: CLIENT,<br/>VIM_DP_DOC_TYPE"| VIM1["VIM + VIMT100"]:::intermediate
+        VIMT100 --> VIM1
+        VIM1 --> |"Keys: CLIENT,<br/>VIM_DOC_STATUS"| VIM_FULL["VIM Full Merged"]:::intermediate
+        VIMT101 --> VIM_FULL
+        
+        LOG1["1LOG_<br/>Action Logs"]:::sourceTable
+        LOG8["8LOG_<br/>Process Logs"]:::sourceTable
+        APRLOG["APRLOG<br/>Approval Logs"]:::sourceTable
+        COMM1["1LOGCOMM<br/>Comments"]:::sourceTable
+        COMM8["8LOGCOMM<br/>Comments"]:::sourceTable
+        
+        VIM_FULL --> VIM_COMPLETE["VIM Complete Dataset"]:::intermediate
+        LOG1 --> VIM_COMPLETE
+        LOG8 --> VIM_COMPLETE
+        APRLOG --> VIM_COMPLETE
+        COMM1 --> VIM_COMPLETE
+        COMM8 --> VIM_COMPLETE
+        
+        VENDOR --> |"+ VIM Data Keys:<br/>CLIENT, VIM_OBJ_KEY"| VIM_DATA["+ VIM Data"]:::intermediate
+        VIM_COMPLETE --> VIM_DATA
+    end
+    
+    subgraph Phase9["PHASE 9: POST-PROCESSING"]
+        VIM_DATA --> POST["Complete Merged Dataset"]:::intermediate
+        POST --> |"Rename columns<br/>Create IDs<br/>Create TAX_AMOUNT"| FINAL["FINAL OUTPUT DATASET<br/>(CSV Export)"]:::finalOutput
+    end
+    
+    subgraph Phase10["PHASE 10: DOA DATA (Z-BLOCK)"]
+        VRDOA["VRDOA<br/>DOA Data"]:::sourceTable
+        DOAREDEL["DOAREDEL<br/>Redelivery"]:::sourceTable
+        VRDOA --> |"Rename & Save"| DOA_OUT["doa_data.parquet"]:::finalOutput
+        DOAREDEL --> |"Rename & Save"| DOA_REDEL["doa_redelivery_data.parquet"]:::finalOutput
+    end

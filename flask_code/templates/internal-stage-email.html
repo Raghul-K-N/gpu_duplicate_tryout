@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="html">
+  <head>
+    <title>Internal Email</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .custom-content {
+        font-family: Arial, sans-serif !important;
+        width: 980px;
+      }
+
+      .content-header {
+        color: #05265d;
+        font-weight: 600;
+        font-size: 32px;
+        text-align: center;
+        margin-top: 64px;
+      }
+
+      .mail-header {
+        background-color: #05265d;
+        height: 80px;
+      }
+
+      .mail-header div {
+        padding-top: 12px;
+        text-align: center;
+      }
+
+      .success {
+        color: #15c61c;
+      }
+
+      .failure {
+        color: #eb4b26;
+      }
+
+      .font-10 {
+        font-size: 10px;
+      }
+
+      .table-heading {
+        color: #05265d;
+        font-size: 16px;
+        font-weight: bold;
+        padding-bottom: 12px;
+      }
+
+      table.success-summary {
+        width: 80%;
+        margin-left: 10%;
+      }
+
+      table.failure-summary {
+        width: 100%;
+      }
+
+      table {
+        border: 1px solid #30a4dc;
+        border-spacing: 0px;
+        border-radius: 10px;
+        margin-bottom: 32px;
+      }
+
+      thead {
+        border: none;
+        height: 40px;
+      }
+
+      .thead-fc {
+        border-radius: 9px 0px 0px 0px;
+      }
+
+      .thead-lc {
+        border-radius: 0px 9px 0px 0px;
+      }
+
+      thead th {
+        background-color: #30a4dc;
+        border-spacing: 0px;
+        border-collapse: collapse;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      tbody tr {
+        min-height: 40px;
+        height: 40px;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="custom-content">
+      <div class="mail-header">
+        <div>
+          <img src="{{ logo }}" alt="Thinkrisk" />
+        </div>
+      </div>
+      <div class="content-header">
+        {{stage}}<br />
+        in {{process}} processing was a {% if status == 'success' %}
+        <span class="success">Success</span>
+        {% else %}
+        <span class="failure">Failure</span>
+        {% endif %}
+      </div>
+
+      <div style="text-align: center">
+        <img
+          src="{{ icon }}"
+          alt="process success"
+          style="width: 126px; margin-top: 32px"
+        />
+      </div>
+
+      <div class="details" style="text-align: center; margin-top: 24px">
+        <div class="table-heading">Summary</div>
+        <table
+          class="success-summary"
+          aria-describedby="success or failed summary"
+        >
+          <thead>
+            {% if status == 'success'%}
+            <th class="thead-fc">Process</th>
+            <th>Number of records</th>
+            <th>Date</th>
+            <th>Description</th>
+            <th class="thead-lc">Time taken</th>
+            {% elif key == 'DATA_HEALTH_CHECK_STATUS' %}
+            <th class="thead-fc">Date</th>
+            <th>Reason</th>
+            <th>Column name</th>
+            <th>
+              Rows failed
+              <div class="font-10">Failed / Total</div>
+            </th>
+            <th class="thead-lc">Time taken</th>
+            {% else %}
+            <th class="thead-fc">Date</th>
+            <th>Description</th>
+            <th class="thead-lc">Time taken</th>
+            {% endif %}
+          </thead>
+          <tbody>
+            {% if key != 'DATA_HEALTH_CHECK_STATUS' or status == 'success' %} {%
+            for val in data %}
+            <tr>
+              {% if status == 'success'%}
+              <td>{{stage}}</td>
+              <td>{{val["record_count"]}}</td>
+              {% endif %}
+              <td>{{val["date"]}}</td>
+              <td>{{val["description"]}}</td>
+              <td>{{val["time_taken"]}}</td>
+            </tr>
+            {% endfor %} {% else %} {% for val in data %}
+            <tr>
+              <td>{{val["date"]}}</td>
+              <td>{{val["reason"]}}</td>
+              <td>{{val["column_name"]}}</td>
+              <td>
+                <span class="failure">{{val['failed_count']}} </span> /
+                {{val['total_count']}}
+              </td>
+              <td>{{val["time_taken"]}}</td>
+            </tr>
+            {% endfor %} {% endif %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,603 @@
+from code1.logger import capture_log_message
+
+
+def create_query_src_gl_data(audit_id):
+    """
+    This function creates _SRC_GL_DATA dynamically query based on the audit id value
+    
+    Args:
+        audit_id : Audit id number
+        
+    Returns:
+        Sql Query to create the table
+    """
+    table_name = "_SRC_GL_DATA_"+str(audit_id)
+    capture_log_message(f'Creating {table_name}')
+    create_query = """
+    CREATE TABLE IF NOT EXISTS {} (
+    `ID` int NOT NULL AUTO_INCREMENT,
+    `TRANSACTION_ID_GA` varchar(150) DEFAULT NULL,
+    `audit_id` int DEFAULT NULL,
+    `ACCOUNTING_DOC` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+    `TRANSACTION_DESCRIPTION` varchar(255) DEFAULT NULL,
+    `DOC_TYPE` varchar(150) DEFAULT NULL,
+    `DOC_TYPE_DESCRIPTION` varchar(255) DEFAULT NULL,
+    `AMOUNT` decimal(19,2) DEFAULT NULL,
+    `DEBIT_CREDIT_INDICATOR` varchar(150) DEFAULT NULL,
+    `SAP_ACCOUNT` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+    `ACCOUNT_DESCRIPTION` varchar(255) DEFAULT NULL,
+    `SAP_P01_ACCOUNT_DESCRIPTION` varchar(255) DEFAULT NULL,
+    `SAP_P02_ACCOUNT_DESCRIPTION` varchar(255) DEFAULT NULL,
+    `SAP_P03_ACCOUNT_DESCRIPTION` varchar(255) DEFAULT NULL,
+    `SAP_P04_ACCOUNT_DESCRIPTION` varchar(255) DEFAULT NULL,
+    `SAP_P05_ACCOUNT_DESCRIPTION` varchar(255) DEFAULT NULL,
+    `POSTED_DATE` datetime DEFAULT NULL,
+    `POSTED_BY` varchar(150) DEFAULT NULL,
+    `POSTED_BY_POSTION` varchar(150) DEFAULT NULL,
+    `POSTED_BY_DEPARTMENT` varchar(150) DEFAULT NULL,
+    `POSTED_LOCATION` varchar(150) DEFAULT NULL,
+    `ENTERED_DATE` datetime DEFAULT NULL,
+    `ENTERED_BY` varchar(150) DEFAULT NULL,
+    `ENTERED_BY_POSTION` varchar(150) DEFAULT NULL,
+    `ENTERED_BY_DEPARTMENT` varchar(150) DEFAULT NULL,
+    `ENTERED_LOCATION` varchar(150) DEFAULT NULL,
+    `SAP_COMPANY` varchar(150) DEFAULT NULL,
+    `IS_REVERSED` tinyint DEFAULT NULL,
+    `IS_REVERSAL` tinyint DEFAULT NULL,
+    `CREATED_DATE` datetime DEFAULT CURRENT_TIMESTAMP,
+    `MODIFIED_DATE` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    `LEDGER` varchar(50) DEFAULT NULL,
+    `POSTED_BY_USER_TYPE` varchar(150) DEFAULT NULL,
+    `POSTED_BY_ORG_CHART_UNIT` varchar(150) DEFAULT NULL,
+    `POSTED_BY_FUNCTION` varchar(150) DEFAULT NULL,
+    `HOLIDAY` varchar(20) DEFAULT NULL,
+    `SRC_SID` int NOT NULL,
+    PRIMARY KEY (`ID`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    """.format(table_name)
+    
+    return create_query
+
+
+def create_query_rpt_transaction(audit_id):
+    """
+    This function is used to dynamically create rpttransaction table query based on audit id
+    
+    Args:
+        audit_id : Audit id number
+        
+    Returns:
+        Mysql Create Query
+    """    
+    table_name = 'rpttransaction_'+str(audit_id)
+    capture_log_message(f'Creating {table_name}')
+
+    create_query = f"""
+    CREATE TABLE IF NOT EXISTS {table_name} (
+    `TRANSACTIONID` int NOT NULL AUTO_INCREMENT,
+    `audit_id` int DEFAULT NULL,
+    `TRANSACTION_CODE` varchar(150) DEFAULT NULL,
+    `TRANSACTION_DESC` text,
+    `JOURNAL_NAME` text,
+    `ACCOUNTID` int DEFAULT NULL,
+    `ACCOUNTDOCID` int DEFAULT NULL,
+    `COMPANYID` int DEFAULT NULL,
+    `CUSTOMERID` int DEFAULT NULL,
+    `VENDORID` int DEFAULT NULL,
+    `ENTERED_LOCATION` int DEFAULT NULL,
+    `ENTERED_BY` int DEFAULT NULL,
+    `ENTERED_DATE` datetime DEFAULT NULL,
+    `POSTED_DATE` datetime DEFAULT NULL,
+    `POSTING_TYPE` varchar(155) DEFAULT NULL,
+    `DEPARTMENTID` int DEFAULT NULL,
+    `DOCTYPEID` int DEFAULT NULL,
+    `DEBIT_AMOUNT` decimal(19,4) DEFAULT NULL,
+    `CREDIT_AMOUNT` decimal(19,4) DEFAULT NULL,
+    `IS_REVERSAL` int DEFAULT NULL,
+    `IS_REVERSED` int DEFAULT NULL,
+    `REVIEWSTATUSID` int DEFAULT NULL,
+    `THRESHOLD_MATERIALTY` tinyint DEFAULT NULL,
+    `IS_SCORED` tinyint DEFAULT '0',
+    `STATUS` tinyint DEFAULT '1',
+    `IS_POSTED_HOLIDAY` tinyint DEFAULT NULL,
+    `SRC_SID` int DEFAULT NULL,
+    PRIMARY KEY (`TRANSACTIONID`),
+    KEY `idx_trans_accid` (`ACCOUNTID`),
+    KEY `idx_trans_ACCOUNTDOCID` (`ACCOUNTDOCID`),
+    KEY `idx_trans_debit` (`DEBIT_AMOUNT`),
+    KEY `idx_trans_credit` (`CREDIT_AMOUNT`),
+    KEY `idx_trans_company_id` (`COMPANYID`),
+    KEY `idx_trans_company_accid` (`ACCOUNTID`,`COMPANYID`),
+    KEY `idx_trans_comp_acc_mt` (`ACCOUNTID`,`COMPANYID`,`THRESHOLD_MATERIALTY`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    """
+    return create_query
+
+
+def create_query_rpt_transaction_flat(qtr_year):
+    """
+    This function is used to dynamically create rpttransactionflat table query based on audit id
+    
+    Args:
+        qtr_year : quarter year number
+        
+    Returns:
+        Mysql Create Query
+    """
+
+    table_name = "rpttransactionflat_"+str(qtr_year)
+    capture_log_message(f'Creating {table_name}')
+
+    create_query = f"""
+    CREATE TABLE IF NOT EXISTS {table_name} (
+    `audit_id` int DEFAULT NULL,
+    `ACCOUNTDOCID` int DEFAULT NULL,
+    `TRANSACTIONID` int DEFAULT '0',
+    `ACCOUNTID` int DEFAULT '0',
+    `ACCOUNT_CODE` varchar(150) DEFAULT NULL,
+    `DESCRIPTION` varchar(255) DEFAULT NULL,
+    `LINE_ITEM_TEXT` varchar(255) DEFAULT NULL,
+    `HEADER_TEXT` varchar(255) DEFAULT NULL,
+    `ENTERED_DATE` datetime DEFAULT NULL,
+    `LOCATION_CODE` varchar(150) DEFAULT NULL,
+    `ENTERED_BY_NAME` varchar(150) DEFAULT NULL,
+    `ENTERED_FUNCTION` varchar(45) DEFAULT NULL,
+    `COMPANY_CODE` varchar(150) DEFAULT NULL,
+    `CONTROL_DEVIATION` longtext,
+    `NEXT_QTR_POSTING` tinyint DEFAULT NULL,
+    `POSTS_HOLIDAYS` tinyint DEFAULT '0',
+    `NON_BALANCED` tinyint DEFAULT '0',
+    `MANUAL_ENTRIES` tinyint DEFAULT NULL,
+    `CASH_EXPENDITURE` tinyint DEFAULT NULL,
+    `THRESHOLD_MATERIALTY` tinyint DEFAULT NULL,
+    `POSTS_NIGHT` tinyint DEFAULT '0',
+    `POSTS_WEEKEND` tinyint DEFAULT '0',
+    `SAME_USER_POSTING` tinyint DEFAULT NULL,
+    `SUSPICIOUS_KEYWORDS` tinyint DEFAULT NULL,
+    `NON_FINANCE_DEPT` tinyint DEFAULT NULL,
+    `NON_FINANCE_PERSON` tinyint DEFAULT '0',
+    `ACCRUAL` tinyint DEFAULT NULL,
+    `REVERSALS` tinyint DEFAULT NULL,
+    `FIREFIGHTER` tinyint DEFAULT NULL,
+    `CASH_NEGATIVE_BALANCE` tinyint DEFAULT NULL,
+    `CASH_ACCRUALS` tinyint DEFAULT '0',
+    `CASH_CONCENTRATION_CREDIT` tinyint DEFAULT NULL,
+    `CASH_CONCENTRATION_DEBIT` tinyint DEFAULT NULL,
+    `CASH_DISBURSEMENT_DEBIT` tinyint DEFAULT NULL,
+    `CASH_DISBURSEMENT_CREDIT` tinyint DEFAULT NULL,
+    `CASH_PAYROLL_DEBIT` tinyint DEFAULT NULL,
+    `CASH_PAYROLL_CREDIT` tinyint DEFAULT NULL,
+    `CASH_LOCKBOX` tinyint DEFAULT NULL,
+    `CASH_LOCKBOX_SUSPENSE` tinyint DEFAULT NULL,
+    `INFREQUENTLY_USED_ACCOUNTS` tinyint DEFAULT '0',
+    `UNUSUAL_ACCOUNT_PAIRING` tinyint DEFAULT '0',
+    `UNUSUAL_ACCOUNTING_PATTERN` tinyint DEFAULT NULL,
+    `ROUNDING_OFF` tinyint DEFAULT NULL,
+    `BLANK_JE` tinyint DEFAULT '0',
+    `UNUSUAL_GL_ACCOUNTS` tinyint DEFAULT '0',
+    `VENDOR_GL_ACCOUNT_MISMATCH` tinyint DEFAULT '0',
+    `AI_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `STAT_SCORE_INDEXED` decimal(19,4) DEFAULT NULL,
+    `RULES_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `TRANSACTION_DESC` text,
+    `UNUSUAL_USER_POSTING` tinyint DEFAULT '0',
+    `UNUSUAL_PAIRING_ACCOUNT` tinyint DEFAULT '0',
+    `UNUSUAL_ACCOUNT_POSTING` tinyint DEFAULT '0',
+    `DEBIT_AMOUNT` double DEFAULT NULL,
+    `CREDIT_AMOUNT` double DEFAULT NULL,
+    `NON_TRADE_REVENUE` tinyint DEFAULT NULL,
+    `TRADE_REVENUE` tinyint DEFAULT NULL,
+    `OTHER_INVESTMENT_ASSET_ACCOUNTS` tinyint DEFAULT NULL,
+    `CASH_ACCOUNTS` tinyint DEFAULT NULL,
+    `EXPENSE_ACCOUNTS` tinyint DEFAULT NULL,
+    `VAT_BALANCE_ACCOUNTS` tinyint DEFAULT NULL,
+    `RETAINED_EARNINGS` tinyint DEFAULT NULL,
+    `PREPAYMENT_ASSET_ACCOUNTS` tinyint DEFAULT NULL,
+    `RECONCILIATION_ACCOUNTS` tinyint DEFAULT NULL,
+    `RECURRING_DIGITS` tinyint DEFAULT NULL,
+    `ROUND_NUMBERS` tinyint DEFAULT NULL,
+    `LARGEST_JOURNAL_LINES` tinyint DEFAULT NULL,
+    `LARGE_DEBITS_TO_REVENUE` tinyint DEFAULT NULL,
+    `LARGE_PNL_DEBITS` tinyint DEFAULT NULL,
+    `LARGE_PNL_CREDITS` tinyint DEFAULT NULL,
+    `JOURNALS_FEW_ENTRIES` tinyint DEFAULT NULL,
+    `WEAKLY_DESCRIBED_JOURNALS` tinyint DEFAULT NULL,
+    `PRE_POSTED_BACK_POSTED_JOURNALS` tinyint DEFAULT NULL,
+    `GL_ACCOUNT_UNUSUAL_COMPANY_CODE` tinyint DEFAULT NULL,
+    `RECURRING_ENTRIES` tinyint DEFAULT NULL,
+    `MONITORING_DEVIATION` longtext,
+    `BLENDED_RISK_SCORE` double DEFAULT NULL,
+    `OPTIMISED_BLANK_JE` tinyint DEFAULT NULL,
+    `OPTIMISED_UNUSUAL_ACCOUNT_PAIRING` tinyint DEFAULT NULL,
+    `OPTIMISED_UNUSUAL_ACCOUNTING_PATTERN` tinyint DEFAULT NULL,
+    `OPTIMISED_SUSPICIOUS_KEYWORDS` tinyint DEFAULT NULL,
+    `OPTIMISED_POSTS_HOLIDAYS` tinyint DEFAULT NULL,
+    `OPTIMISED_POSTS_WEEKEND` tinyint DEFAULT NULL,
+    `OPTIMISED_NEXT_QTR_POSTING` tinyint DEFAULT NULL,
+    `OPTIMISED_SAME_USER_POSTING` tinyint DEFAULT NULL,
+    `OPTIMISED_POSTS_NIGHT` tinyint DEFAULT NULL,
+    `OPTIMISED_RULES_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `OPTIMISED_CONTROL_DEVIATION` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+    `OPTIMISED_BLENDED_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `COMMENTS` bigint DEFAULT NULL,
+    UNIQUE KEY `transidx` (`TRANSACTIONID`) USING BTREE,
+    KEY `accountdocidx` (`ACCOUNTDOCID`) USING BTREE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;    
+    """
+
+    return create_query
+
+
+def create_query_rpt_transaction_score(audit_id):
+    """
+    This function is used to dynamically create rpttransactionscore table query based on audit id
+    
+    Args:
+        audit_id : Audit id number
+        
+    Returns:
+        Mysql Create Query
+    """
+
+    table_name = "rpttransactionscore_"+str(audit_id)
+    capture_log_message(f'Creating {table_name}')
+
+    create_query = f"""
+    CREATE TABLE IF NOT EXISTS {table_name} (
+    `TRANSSCOREID` bigint NOT NULL AUTO_INCREMENT,
+    `audit_id` int DEFAULT NULL,
+    `TRANSACTIONID` int DEFAULT NULL,
+    `ACCOUNTDOCID` int DEFAULT NULL,
+    `DEVIATION` tinyint DEFAULT NULL COMMENT 'Anomaly true or false',
+    `BLENDED_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `BLENDED_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    `AI_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `AI_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    `STAT_SCORE` decimal(19,4) DEFAULT NULL,
+    `STAT_SCORE_INDEXED` decimal(19,4) DEFAULT NULL,
+    `RULES_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `RULES_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    `CONTROL_DEVIATION` longtext,
+    `THRESHOLD_MATERIALTY` tinyint DEFAULT NULL,
+    `NEXT_QTR_POSTING` tinyint DEFAULT NULL,
+    `POSTS_WEEKEND` tinyint DEFAULT '0',
+    `POSTS_NIGHT` tinyint DEFAULT '0',
+    `POSTS_HOLIDAYS` tinyint DEFAULT '0',
+    `SAME_USER_POSTING` tinyint DEFAULT NULL,
+    `SUSPICIOUS_KEYWORDS` tinyint DEFAULT NULL,
+    `NON_FINANCE_DEPT` tinyint DEFAULT NULL,
+    `ACCRUAL` tinyint DEFAULT NULL,
+    `REVERSALS` tinyint DEFAULT NULL,
+    `FIREFIGHTER` tinyint DEFAULT NULL,
+    `CASH_NEGATIVE_BALANCE` tinyint DEFAULT NULL,
+    `CASH_CONCENTRATION_CREDIT` tinyint DEFAULT NULL,
+    `CASH_CONCENTRATION_DEBIT` tinyint DEFAULT NULL,
+    `CASH_DISBURSEMENT_CREDIT` tinyint DEFAULT NULL,
+    `CASH_DISBURSEMENT_DEBIT` tinyint DEFAULT NULL,
+    `CASH_PAYROLL_CREDIT` tinyint DEFAULT NULL,
+    `CASH_PAYROLL_DEBIT` tinyint DEFAULT NULL,
+    `CASH_LOCKBOX` tinyint DEFAULT NULL,
+    `CASH_LOCKBOX_SUSPENSE` tinyint DEFAULT NULL,
+    `NON_FINANCE_PERSON` tinyint DEFAULT '0',
+    `BLANK_JE` tinyint DEFAULT '0',
+    `INFREQUENTLY_USED_ACCOUNTS` tinyint DEFAULT '0',
+    `UNUSUAL_ACCOUNTING_PATTERN` tinyint DEFAULT '0',
+    `CASH_ACCRUALS` tinyint DEFAULT '0',
+    `UNUSUAL_GL_ACCOUNTS` tinyint DEFAULT '0',
+    `NON_BALANCED` tinyint DEFAULT '0',
+    `VENDOR_GL_ACCOUNT_MISMATCH` tinyint DEFAULT '0',
+    `MANUAL_ENTRIES` tinyint DEFAULT NULL,
+    `CASH_EXPENDITURE` tinyint DEFAULT NULL,
+    `ROUNDING_OFF` tinyint DEFAULT NULL,
+    `STATUS` tinyint DEFAULT '1',
+    `NON_TRADE_REVENUE` tinyint DEFAULT NULL,
+    `TRADE_REVENUE` tinyint DEFAULT NULL,
+    `OTHER_INVESTMENT_ASSET_ACCOUNTS` tinyint DEFAULT NULL,
+    `CASH_ACCOUNTS` tinyint DEFAULT NULL,
+    `EXPENSE_ACCOUNTS` tinyint DEFAULT NULL,
+    `VAT_BALANCE_ACCOUNTS` tinyint DEFAULT NULL,
+    `RETAINED_EARNINGS` tinyint DEFAULT NULL,
+    `PREPAYMENT_ASSET_ACCOUNTS` tinyint DEFAULT NULL,
+    `RECONCILIATION_ACCOUNTS` tinyint DEFAULT NULL,
+    `RECURRING_DIGITS` tinyint DEFAULT NULL,
+    `ROUND_NUMBERS` tinyint DEFAULT NULL,
+    `LARGEST_JOURNAL_LINES` tinyint DEFAULT NULL,
+    `LARGE_DEBITS_TO_REVENUE` tinyint DEFAULT NULL,
+    `LARGE_PNL_DEBITS` tinyint DEFAULT NULL,
+    `LARGE_PNL_CREDITS` tinyint DEFAULT NULL,
+    `JOURNALS_FEW_ENTRIES` tinyint DEFAULT NULL,
+    `WEAKLY_DESCRIBED_JOURNALS` tinyint DEFAULT NULL,
+    `PRE_POSTED_BACK_POSTED_JOURNALS` tinyint DEFAULT NULL,
+    `GL_ACCOUNT_UNUSUAL_COMPANY_CODE` tinyint DEFAULT NULL,
+    `UNUSUAL_ACCOUNT_PAIRING` tinyint DEFAULT NULL,
+    `RECURRING_ENTRIES` tinyint DEFAULT NULL,
+    `MONITORING_DEVIATION` longtext,
+    `OPTIMISED_BLANK_JE` tinyint DEFAULT NULL,
+    `OPTIMISED_UNUSUAL_ACCOUNT_PAIRING` tinyint DEFAULT NULL,
+    `OPTIMISED_UNUSUAL_ACCOUNTING_PATTERN` tinyint DEFAULT NULL,
+    `OPTIMISED_SUSPICIOUS_KEYWORDS` tinyint DEFAULT NULL,
+    `OPTIMISED_POSTS_HOLIDAYS` tinyint DEFAULT NULL,
+    `OPTIMISED_POSTS_WEEKEND` tinyint DEFAULT NULL,
+    `OPTIMISED_NEXT_QTR_POSTING` tinyint DEFAULT NULL,
+    `OPTIMISED_SAME_USER_POSTING` tinyint DEFAULT NULL,
+    `OPTIMISED_POSTS_NIGHT` tinyint DEFAULT NULL,
+    `OPTIMISED_RULES_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `OPTIMISED_RULES_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    `OPTIMISED_CONTROL_DEVIATION` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+    `OPTIMISED_DEVIATION` tinyint DEFAULT NULL,
+    `OPTIMISED_BLENDED_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `OPTIMISED_BLENDED_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    PRIMARY KEY (`TRANSSCOREID`),
+    KEY `idx_trans_blend_score` (`BLENDED_RISK_SCORE`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    """
+
+    return create_query
+
+
+def create_query_rpt_account_document(audit_id):
+    """
+    This function is used to dynamically create rptaccountdocument table query based on audit id
+    
+    Args:
+        audit_id : Audit id number
+        
+    Returns:
+        Mysql Create Query
+    """
+
+    table_name = "rptaccountdocument_"+str(audit_id)
+    capture_log_message(f'Creating {table_name}')
+
+    create_query = f"""
+    CREATE TABLE IF NOT EXISTS {table_name} (
+    `ACCOUNTDOCID` int NOT NULL AUTO_INCREMENT,
+    `ACCOUNTDOC_CODE` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+    `audit_id` int DEFAULT NULL,
+    `COMPANY_CODE` int DEFAULT NULL,
+    `DEBIT_AMOUNT` decimal(19,4) DEFAULT NULL,
+    `CREDIT_AMOUNT` decimal(19,4) DEFAULT NULL,
+    `POSTED_BY` int DEFAULT NULL,
+    `POSTED_DATE` datetime DEFAULT NULL,
+    `POSTED_LOCATION` int DEFAULT NULL,
+    `DOCUMENTID` int DEFAULT NULL,
+    `REVIEWSTATUSID` int DEFAULT '1',
+    `IS_SCORED` tinyint DEFAULT '0',
+    `THRESHOLD_MATERIALTY` tinyint DEFAULT NULL COMMENT 'ABOVE THRESHOLD(1), BELOW THRESHOLD (0), ABOVE MATERIALTY (2)',
+    PRIMARY KEY (`ACCOUNTDOCID`),
+    KEY `idx_adoc_rstatus` (`REVIEWSTATUSID`),
+    KEY `idx_adoc_accdocid` (`ACCOUNTDOCID`),
+    KEY `idx_adoc_doc_code` (`ACCOUNTDOC_CODE`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    """
+
+    return create_query
+
+
+def create_query_rpt_account_document_flat(qtr_year):
+    """
+    This function is used to dynamically create rptaccountdocumentflat table query based on audit id
+    
+    Args:
+        audit_id : Audit id number
+        
+    Returns:
+        Mysql Create Query
+    """
+
+    table_name = "rptaccountdocumentflat_"+str(qtr_year)
+    capture_log_message(f'Creating {table_name}')
+
+    create_query = f"""
+    CREATE TABLE IF NOT EXISTS {table_name} (
+    `audit_id` int DEFAULT NULL,
+    `ACCOUNTDOCID` int NOT NULL DEFAULT '0',
+    `ACCOUNTDOC_CODE` varchar(150) DEFAULT NULL,
+    `POSTED_DATE` datetime DEFAULT NULL,
+    `DEBIT_AMOUNT` double DEFAULT NULL,
+    `CREDIT_AMOUNT` double DEFAULT NULL,
+    `POSTED_BY_NAME` varchar(150) DEFAULT NULL,
+    `POSTED_BY` int DEFAULT NULL,
+    `ACCDOCSCOREID` int NOT NULL DEFAULT '0',
+    `DEVIATION` tinyint DEFAULT NULL COMMENT 'Anomaly true or false',
+    `BLENDED_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `BLENDED_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    `RULES_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `RULES_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    `THRESHOLD_MATERIALTY` tinyint DEFAULT NULL,
+    `NEXT_QTR_POSTING` tinyint DEFAULT NULL,
+    `POSTS_WEEKEND` tinyint DEFAULT NULL,
+    `POSTS_NIGHT` tinyint DEFAULT NULL,
+    `POSTS_HOLIDAYS` tinyint DEFAULT NULL,
+    `SAME_USER_POSTING` tinyint DEFAULT NULL,
+    `SUSPICIOUS_KEYWORDS` tinyint DEFAULT NULL,
+    `NON_FINANCE_DEPT` tinyint DEFAULT NULL,
+    `ACCRUAL` tinyint DEFAULT NULL,
+    `REVERSALS` tinyint DEFAULT NULL,
+    `FIREFIGHTER` tinyint DEFAULT NULL,
+    `CASH_NEGATIVE_BALANCE` tinyint DEFAULT NULL,
+    `CASH_CONCENTRATION_CREDIT` tinyint DEFAULT NULL,
+    `CASH_CONCENTRATION_DEBIT` tinyint DEFAULT NULL,
+    `CASH_DISBURSEMENT_DEBIT` tinyint DEFAULT NULL,
+    `CASH_DISBURSEMENT_CREDIT` tinyint DEFAULT NULL,
+    `CASH_PAYROLL_DEBIT` tinyint DEFAULT NULL,
+    `CASH_PAYROLL_CREDIT` tinyint DEFAULT NULL,
+    `CASH_LOCKBOX` tinyint DEFAULT NULL,
+    `CASH_LOCKBOX_SUSPENSE` tinyint DEFAULT NULL,
+    `NON_FINANCE_PERSON` tinyint DEFAULT NULL,
+    `BLANK_JE` tinyint DEFAULT NULL,
+    `INFREQUENTLY_USED_ACCOUNTS` tinyint DEFAULT NULL,
+    `UNUSUAL_ACCOUNT_PAIRING` tinyint DEFAULT NULL,
+    `CASH_ACCRUALS` tinyint DEFAULT NULL,
+    `UNUSUAL_GL_ACCOUNTS` tinyint DEFAULT NULL,
+    `NON_BALANCED` tinyint DEFAULT NULL,
+    `VENDOR_GL_ACCOUNT_MISMATCH` tinyint DEFAULT NULL,
+    `MANUAL_ENTRIES` tinyint DEFAULT NULL,
+    `CASH_EXPENDITURE` tinyint DEFAULT NULL,
+    `ROUNDING_OFF` tinyint DEFAULT NULL,
+    `STATUS` tinyint DEFAULT NULL,
+    `POSTED_LOCATION` int DEFAULT NULL,
+    `COMPANY_CODE_NAME` varchar(150) DEFAULT NULL,
+    `COMPANY_CODE` int DEFAULT NULL,
+    `POSTED_LOCATION_NAME` varchar(150) DEFAULT NULL,
+    `CONTROL_DEVIATION` longtext,
+    `REVIEWSTATUSID` int NOT NULL DEFAULT '0',
+    `REVIEW_STATUS_CODE` varchar(150) DEFAULT NULL,
+    `COMMENTS` bigint NOT NULL DEFAULT '0',
+    `ASSIGNED_TO` int DEFAULT NULL,
+    `ASSIGNED_BY` int DEFAULT NULL,
+    `NON_TRADE_REVENUE` tinyint DEFAULT NULL,
+    `TRADE_REVENUE` tinyint DEFAULT NULL,
+    `OTHER_INVESTMENT_ASSET_ACCOUNTS` tinyint DEFAULT NULL,
+    `CASH_ACCOUNTS` tinyint DEFAULT NULL,
+    `EXPENSE_ACCOUNTS` tinyint DEFAULT NULL,
+    `VAT_BALANCE_ACCOUNTS` tinyint DEFAULT NULL,
+    `RETAINED_EARNINGS` tinyint DEFAULT NULL,
+    `PREPAYMENT_ASSET_ACCOUNTS` tinyint DEFAULT NULL,
+    `RECONCILIATION_ACCOUNTS` tinyint DEFAULT NULL,
+    `RECURRING_DIGITS` tinyint DEFAULT NULL,
+    `ROUND_NUMBERS` tinyint DEFAULT NULL,
+    `LARGEST_JOURNAL_LINES` tinyint DEFAULT NULL,
+    `LARGE_DEBITS_TO_REVENUE` tinyint DEFAULT NULL,
+    `LARGE_PNL_DEBITS` tinyint DEFAULT NULL,
+    `LARGE_PNL_CREDITS` tinyint DEFAULT NULL,
+    `JOURNALS_FEW_ENTRIES` tinyint DEFAULT NULL,
+    `WEAKLY_DESCRIBED_JOURNALS` tinyint DEFAULT NULL,
+    `PRE_POSTED_BACK_POSTED_JOURNALS` tinyint DEFAULT NULL,
+    `GL_ACCOUNT_UNUSUAL_COMPANY_CODE` tinyint DEFAULT NULL,
+    `RECURRING_ENTRIES` tinyint DEFAULT NULL,
+    `MONITORING_DEVIATION` longtext,
+    `ISDEVIATION` tinyint DEFAULT NULL,
+    `OPTIMISED_BLANK_JE` tinyint DEFAULT NULL,
+    `OPTIMISED_UNUSUAL_ACCOUNT_PAIRING` tinyint DEFAULT NULL,
+    `OPTIMISED_UNUSUAL_ACCOUNTING_PATTERN` tinyint DEFAULT NULL,
+    `OPTIMISED_SUSPICIOUS_KEYWORDS` tinyint DEFAULT NULL,
+    `OPTIMISED_POSTS_HOLIDAYS` tinyint DEFAULT NULL,
+    `OPTIMISED_POSTS_WEEKEND` tinyint DEFAULT NULL,
+    `OPTIMISED_NEXT_QTR_POSTING` tinyint DEFAULT NULL,
+    `OPTIMISED_SAME_USER_POSTING` tinyint DEFAULT NULL,
+    `OPTIMISED_POSTS_NIGHT` tinyint DEFAULT NULL,
+    `OPTIMISED_RULES_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `OPTIMISED_RULES_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    `OPTIMISED_CONTROL_DEVIATION` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+    `OPTIMISED_DEVIATION` tinyint DEFAULT NULL,
+    `OPTIMISED_BLENDED_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `OPTIMISED_BLENDED_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    `SELECTED_TRANSACTIONS` text,
+    `SUB_R_STATUS_CODE` varchar(150) DEFAULT NULL,
+    `SUBRSTATUSID` int DEFAULT NULL,
+    `DOCUMENTID` int DEFAULT NULL,
+    `UNUSUAL_ACCOUNTING_PATTERN` tinyint DEFAULT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    """
+
+    return create_query
+
+
+def create_query_rpt_accountdoc_score(audit_id):
+    """
+    This function is used to dynamically create rptaccountdocscore table query based on audit id
+    
+    Args:
+        audit_id : Audit id number
+        
+    Returns:
+        Mysql Create Query
+    """
+
+    table_name = "rptaccountdocscore_"+str(audit_id)
+    capture_log_message(f'Creating {table_name}')
+
+    create_query = f"""
+    CREATE TABLE IF NOT EXISTS {table_name} (
+    `ACCDOCSCOREID` int NOT NULL AUTO_INCREMENT,
+    `audit_id` int DEFAULT NULL,
+    `ACCOUNTDOCID` int DEFAULT NULL,
+    `DEVIATION` tinyint DEFAULT NULL COMMENT 'Anomaly true or false',
+    `BLENDED_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `BLENDED_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    `AI_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `AI_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    `STAT_SCORE` decimal(19,4) DEFAULT NULL,
+    `STAT_SCORE_INDEXED` decimal(19,4) DEFAULT NULL,
+    `RULES_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `RULES_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    `CONTROL_DEVIATION` longtext,
+    `THRESHOLD_MATERIALTY` tinyint DEFAULT NULL,
+    `NEXT_QTR_POSTING` tinyint DEFAULT NULL,
+    `POSTS_WEEKEND` tinyint DEFAULT '0',
+    `POSTS_NIGHT` tinyint DEFAULT '0',
+    `POSTS_HOLIDAYS` tinyint DEFAULT '0',
+    `SAME_USER_POSTING` tinyint DEFAULT NULL,
+    `SUSPICIOUS_KEYWORDS` tinyint DEFAULT NULL,
+    `NON_FINANCE_DEPT` tinyint DEFAULT NULL,
+    `ACCRUAL` tinyint DEFAULT NULL,
+    `REVERSALS` tinyint DEFAULT NULL,
+    `FIREFIGHTER` tinyint DEFAULT NULL,
+    `CASH_NEGATIVE_BALANCE` tinyint DEFAULT NULL,
+    `CASH_CONCENTRATION_CREDIT` tinyint DEFAULT NULL,
+    `CASH_CONCENTRATION_DEBIT` tinyint DEFAULT NULL,
+    `CASH_DISBURSEMENT_CREDIT` tinyint DEFAULT NULL,
+    `CASH_DISBURSEMENT_DEBIT` tinyint DEFAULT NULL,
+    `CASH_PAYROLL_CREDIT` tinyint DEFAULT NULL,
+    `CASH_PAYROLL_DEBIT` tinyint DEFAULT NULL,
+    `CASH_LOCKBOX` tinyint DEFAULT NULL,
+    `CASH_LOCKBOX_SUSPENSE` tinyint DEFAULT NULL,
+    `NON_FINANCE_PERSON` tinyint DEFAULT '0',
+    `BLANK_JE` tinyint DEFAULT '0',
+    `INFREQUENTLY_USED_ACCOUNTS` tinyint DEFAULT '0',
+    `UNUSUAL_ACCOUNT_PAIRING` tinyint DEFAULT '0',
+    `CASH_ACCRUALS` tinyint DEFAULT '0',
+    `UNUSUAL_GL_ACCOUNTS` tinyint DEFAULT '0',
+    `NON_BALANCED` tinyint DEFAULT '0',
+    `VENDOR_GL_ACCOUNT_MISMATCH` tinyint DEFAULT '0',
+    `MANUAL_ENTRIES` tinyint DEFAULT NULL,
+    `CASH_EXPENDITURE` tinyint DEFAULT NULL,
+    `ROUNDING_OFF` tinyint DEFAULT NULL,
+    `STATUS` tinyint DEFAULT '1',
+    `UNUSUAL_ACCOUNTING_PATTERN` tinyint DEFAULT NULL,
+    `UNUSUAL_MONETARY_FLOW` tinyint DEFAULT NULL,
+    `SUSPENSE_ACCOUNT_WITH_CASH` tinyint DEFAULT NULL,
+    `SUSPENSE_ACCOUNT_WITH_INVENTORY` tinyint DEFAULT NULL,
+    `NON_TRADE_REVENUE` tinyint DEFAULT NULL,
+    `TRADE_REVENUE` tinyint DEFAULT NULL,
+    `OTHER_INVESTMENT_ASSET_ACCOUNTS` tinyint DEFAULT NULL,
+    `CASH_ACCOUNTS` tinyint DEFAULT NULL,
+    `EXPENSE_ACCOUNTS` tinyint DEFAULT NULL,
+    `VAT_BALANCE_ACCOUNTS` tinyint DEFAULT NULL,
+    `RETAINED_EARNINGS` tinyint DEFAULT NULL,
+    `PREPAYMENT_ASSET_ACCOUNTS` tinyint DEFAULT NULL,
+    `RECONCILIATION_ACCOUNTS` tinyint DEFAULT NULL,
+    `RECURRING_DIGITS` tinyint DEFAULT NULL,
+    `ROUND_NUMBERS` tinyint DEFAULT NULL,
+    `LARGEST_JOURNAL_LINES` tinyint DEFAULT NULL,
+    `LARGE_DEBITS_TO_REVENUE` tinyint DEFAULT NULL,
+    `LARGE_PNL_DEBITS` tinyint DEFAULT NULL,
+    `LARGE_PNL_CREDITS` tinyint DEFAULT NULL,
+    `JOURNALS_FEW_ENTRIES` tinyint DEFAULT NULL,
+    `WEAKLY_DESCRIBED_JOURNALS` tinyint DEFAULT NULL,
+    `PRE_POSTED_BACK_POSTED_JOURNALS` tinyint DEFAULT NULL,
+    `GL_ACCOUNT_UNUSUAL_COMPANY_CODE` tinyint DEFAULT NULL,
+    `RECURRING_ENTRIES` tinyint DEFAULT NULL,
+    `MONITORING_DEVIATION` longtext,
+    `OPTIMISED_BLANK_JE` tinyint DEFAULT NULL,
+    `OPTIMISED_UNUSUAL_ACCOUNT_PAIRING` tinyint DEFAULT NULL,
+    `OPTIMISED_UNUSUAL_ACCOUNTING_PATTERN` tinyint DEFAULT NULL,
+    `OPTIMISED_SUSPICIOUS_KEYWORDS` tinyint DEFAULT NULL,
+    `OPTIMISED_POSTS_HOLIDAYS` tinyint DEFAULT NULL,
+    `OPTIMISED_POSTS_WEEKEND` tinyint DEFAULT NULL,
+    `OPTIMISED_NEXT_QTR_POSTING` tinyint DEFAULT NULL,
+    `OPTIMISED_SAME_USER_POSTING` tinyint DEFAULT NULL,
+    `OPTIMISED_POSTS_NIGHT` tinyint DEFAULT NULL,
+    `OPTIMISED_RULES_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `OPTIMISED_RULES_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    `OPTIMISED_CONTROL_DEVIATION` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
+    `OPTIMISED_DEVIATION` tinyint DEFAULT NULL,
+    `OPTIMISED_BLENDED_RISK_SCORE` decimal(19,4) DEFAULT NULL,
+    `OPTIMISED_BLENDED_RISK_SCORE_RAW` decimal(19,4) DEFAULT NULL,
+    PRIMARY KEY (`ACCDOCSCOREID`),
+    KEY `idx_trans_blend_score` (`BLENDED_RISK_SCORE`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+    """
+
+    return create_query
